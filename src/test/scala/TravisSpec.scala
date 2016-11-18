@@ -3,7 +3,6 @@ import org.scalacheck.Prop.forAll
 
 object TravisSpec extends Properties("test") {
   // https://research.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
-
   val genIntPairs =
     for {
       low <- Gen.choose(1, Int.MaxValue)

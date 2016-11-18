@@ -12,7 +12,7 @@ object TravisSpec extends Properties("test") {
 
     property("binary search ints") = forAll(genIntPairs) {
       case (low, high) if high > low => {
-        val mid = (low + high) / 2
+        val mid = low + ((high - low) / 2);
         mid > low
       }
       case _ => true
